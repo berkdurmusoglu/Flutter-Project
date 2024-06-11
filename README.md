@@ -1,4 +1,5 @@
-#ERCİYES ÜNİVERSİTESİ
+# Mobile Application Project
+ERCİYES ÜNİVERSİTESİ
 
 BİLGİSAYAR MÜHENDİSLİĞİ
 
