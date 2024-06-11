@@ -43,7 +43,41 @@ Mobile Application Development Dersi Final Proje Ödevi
   - Eğer veri başarılı bir şekilde yüklenmişse, yemeğin adı, resmi, kategorisi, bölgesi ve tarifi gibi bilgiler gösterilir.
        * Detaylar SingleChildScrollView içinde Column ile düzenlenmiş şekilde sunulur.
     
+# ENG
 
+## Development Environment:
+  Developed using Android Studio. Android Studio's hot reload feature makes application development easier. That's why I chose to use Android Studio.
+
+## api_service.dart:
+  - Allows the application to receive food data. It is a service class that manages API calls. This class makes HTTP GET requests and converts the incoming JSON responses into Dart objects.
+  - ApiService class has three basic functions:
+        * getCategories: Gets all food categories.
+        * getMealsByCategory: Gets meals belonging to a specific category.
+        * getMealDetails: Gets the details of a specific meal.
+  - These functions are used to retrieve data from the API and return the data if the request is successful, and throw an error if it fails. In this way, it becomes easier to access food data in different parts of the application.
+
+## category_page.dart
+  - CategoryScreen: This class is the main page of the application and lists all food categories.
+        * apiService: An instance of the ApiService class, used to retrieve data from the API.
+  - If data is being loaded, a CircularProgressIndicator is shown.
+  - If the data is loaded successfully, the categories are listed using a ListView.
+  - Each list item (ListTile) shows the name of the category and when clicked, it leads to the MealsScreen screen, which lists the dishes belonging to that category.
+
+## meal_page.dart:
+  - MealsScreen: This class lists meals from a specific meal category.
+        * category: This variable specifies which category of dishes the screen will show.
+        * apiService: An instance of the ApiService class, used to retrieve data from the API.
+  - If data is being loaded, a CircularProgressIndicator is shown.
+  - If the data is loaded successfully, the dishes are listed using a ListView.
+  - Each list item (ListTile) shows the name of the meal and when clicked, it leads to the MealDetailScreen screen showing the details of the meal.
+
+## meal_detail_page.dart:
+  - MealDetailScreen: This class shows the details of a particular dish.
+        * id: Specifies the unique ID of the dish to be displayed.
+        * apiService: An instance of the ApiService class, used to retrieve data from the API.
+  - If data is being loaded, a CircularProgressIndicator is shown.
+  - If the data is loaded successfully, information such as the name, picture, category, region and recipe of the dish will be displayed.
+        * Details are presented arranged by Column in SingleChildScrollView.
 
  
 	
