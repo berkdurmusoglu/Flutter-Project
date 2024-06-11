@@ -45,16 +45,16 @@ Mobile Application Development Dersi Final Proje Ödevi
     
 # ENG
 
-## Development Environment:
+## Geliştirme Ortamı:
   Developed using Android Studio. Android Studio's hot reload feature makes application development easier. That's why I chose to use Android Studio.
 
-## api_service.dart:
-  - Allows the application to receive food data. It is a service class that manages API calls. This class makes HTTP GET requests and converts the incoming JSON responses into Dart objects.
+## apı_service.dart:
+  - Allows the application to retrieve meal data. It is a service class that manages API calls. This class makes HTTP GET requests and converts the incoming JSON responses into Dart objects.
   - ApiService class has three basic functions:
-        * getCategories: Gets all food categories.
-        * getMealsByCategory: Gets meals belonging to a specific category.
-        * getMealDetails: Gets the details of a specific meal.
-  - These functions are used to retrieve data from the API and return the data if the request is successful, and throw an error if it fails. In this way, it becomes easier to access food data in different parts of the application.
+       * getCategories: Gets all food categories.
+       * getMealsByCategory: Gets meals belonging to a specific category.
+       * getMealDetails: Gets the details of a specific meal.
+  -These functions are used to retrieve data from the API and return the data if the request is successful, and throw an error if it fails. In this way, it becomes easier to access food data in different parts of the application.
 
 ## category_page.dart
   - CategoryScreen: This class is the main page of the application and lists all food categories.
